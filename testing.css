@@ -1,0 +1,218 @@
+body {
+	background-image: url("94803684.jpg");
+	background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+	font: 1.05em/1.2em 'Myriad Pro', Helvetica, sans-serif;
+}
+
+#containerheader {
+	min-height: 120px;
+	width: 920px;
+	background: white;
+	color: #000;
+	margin: 3px auto;
+	padding: 20px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	opacity: 1;
+	
+}
+
+#containerheader h1 {
+	opacity: 1;
+	color: black;
+	margin: 0px;
+	padding: 0px;
+	font: 4em/100px 'Myriad Pro', Helvetica, sans-serif;
+	text-shadow: 2px 2px 2px #000;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition:all 0.2s linear;
+	text-align: center;
+	
+}
+
+#container {
+	min-height: 1000px;
+	width: 920px;
+	background: white;
+	color: #000;
+	margin: 0px auto;
+	padding: 20px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	opacity: .90;
+}
+
+#buttons {
+	text-align: center;
+}
+
+#buttons a:nth-child(1) { 
+    background: #ffbb84;
+    animation-delay: 0
+}
+
+#buttons a:nth-child(2) { 
+    background: #85c2ff;
+    animation-delay: -.19s
+}
+
+#buttons a:nth-child(3) { 
+    background: #ff8585; 
+    animation-delay: -.20s
+}
+
+#buttons a {
+	display: block;
+	height: 100px;
+	width: 300px;
+	background: #ffbb84;
+	overflow: hidden;
+	text-decoration: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #FFF;
+	float: left;
+	margin: 0px 1px;
+    position: relative;
+    -webkit-animation: mymove 3s; /* Chrome, Safari, Opera */
+    animation: mymove 3s;
+    animation-timing-function: ease;
+}
+
+#buttons h6 {
+	opacity: 1;
+	color: #FFF;
+	margin: 0px;
+	padding: left 10px;
+	font: 2em/100px 'Myriad Pro', Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #000;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition:all 0.2s linear;
+}
+
+#buttons div {
+	opacity: 0;
+	color: #FFF;
+	height: 100px;
+	background: #E88A00;
+	line-height: 100px;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition:all 0.3s linear;
+    padding: left 40px
+}
+
+#buttons a:hover h6{
+	margin-top: -100px;
+	
+}
+
+#buttons a:hover div{
+	opacity: 1;
+	border-radius: 10px;
+}
+
+<head>
+<style>
+div {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    font-weight: bold;
+    
+}
+
+/* Chrome, Safari, Opera */
+#div1 {-webkit-animation-timing-function: linear;}
+#div2 {-webkit-animation-timing-function: ease;}
+#div3 {-webkit-animation-timing-function: ease-in;}
+#div4 {-webkit-animation-timing-function: ease-out;}
+#div5 {-webkit-animation-timing-function: ease-in-out;}
+
+/* Standard syntax */
+#div1 {animation-timing-function: linear;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {right: 1000px;}
+    to {right: 0px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {right: 1000px;} /* This line said right: 1000px; so it was adjusting the right variable in css instead of the left one. like you have above. for some reason even in chrome it was going off this standard  Transitions here i'm guessing just edit the things as they go and they're supposed to be the same object. */
+    to {right: 0px;}
+}
+
+@import "testingpage2.html"
+    
+#flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+/* Large */
+#flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: flex-end;
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+  #flex-container {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: space-around;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  #flex-container {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
