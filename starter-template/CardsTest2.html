@@ -8,23 +8,25 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
 </head>
 <body>
-    
+
+
     <!-- Modal Trigger -->
   <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Modal</a>
 
   <!-- Modal Structure -->
-  <div id="modal1" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
-    </div>
-  </div>   
-      <div class="container">  
+<div id="modal1" class="modal modal-fixed-footer">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+  </div>
+</div>
+      <div class="container">
 
 <div class="row">
     <div class="col s6">
@@ -33,27 +35,29 @@
                 <span class="card-title grey-text text-darken-4">
                     <a href="#">@TheRealNewsbent</a>
                 </span>
-                <a class="waves-effect waves-teal btn-flat right">
+                <a class="waves-effect waves-teal btn-flat right" >
                     <i class="material-icons large">more_vert</i>
                 </a>
-                <p>
-                    Lorem ipsum dolor sit amet, an cotidieque disputando nam. In clita tacimates erroribus vix, duo purto nostro accommodare in. Et has feugiat democritum, putant utroque sea at. Ea vel purto conceptam.
-                </p>
-                <p>
-                    Ad eos reque singulis, te mentitum deserunt tacimates mea. Putant scripserit at quo, his at quem mazim. Pro augue putant tincidunt at, iudicabit forensibus adversarium sit ne, vel ea ornatus euripidis. No sed dicat scribentur definitiones, atomorum eloquentiam te nam. Nec cu intellegam delicatissimi.
-                </p>
-                <p>
-                    No iudico facilisi cum. Molestie oporteat salutatus per ex, utroque omnesque constituam te pri. Oportere iudicabit necessitatibus ad pri. Mei feugiat nusquam rationibus at. Everti pertinax maluisset vim no.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, an cotidieque disputando nam. In clita tacimates erroribus vix, duo purto nostro accommodare in. Et has feugiat democritum, putant utroque sea at. Ea vel purto conceptam.
-                </p>
-                <p>
-                    Ad eos reque singulis, te mentitum deserunt tacimates mea. Putant scripserit at quo, his at quem mazim. Pro augue putant tincidunt at, iudicabit forensibus adversarium sit ne, vel ea ornatus euripidis. No sed dicat scribentur definitiones, atomorum eloquentiam te nam. Nec cu intellegam delicatissimi.
-                </p>
-                <p>
-                    No iudico facilisi cum. Molestie oporteat salutatus per ex, utroque omnesque constituam te pri. Oportere iudicabit necessitatibus ad pri. Mei feugiat nusquam rationibus at. Everti pertinax maluisset vim no.
-                </p>
+                <div class="carddatastuff" onclick="$('#modal1').openModal();">
+                  <p>
+                      Lorem ipsum dolor sit amet, an cotidieque disputando nam. In clita tacimates erroribus vix, duo purto nostro accommodare in. Et has feugiat democritum, putant utroque sea at. Ea vel purto conceptam.
+                  </p>
+                  <p>
+                      Ad eos reque singulis, te mentitum deserunt tacimates mea. Putant scripserit at quo, his at quem mazim. Pro augue putant tincidunt at, iudicabit forensibus adversarium sit ne, vel ea ornatus euripidis. No sed dicat scribentur definitiones, atomorum eloquentiam te nam. Nec cu intellegam delicatissimi.
+                  </p>
+                  <p>
+                      No iudico facilisi cum. Molestie oporteat salutatus per ex, utroque omnesque constituam te pri. Oportere iudicabit necessitatibus ad pri. Mei feugiat nusquam rationibus at. Everti pertinax maluisset vim no.
+                  </p>
+                  <p>
+                      Lorem ipsum dolor sit amet, an cotidieque disputando nam. In clita tacimates erroribus vix, duo purto nostro accommodare in. Et has feugiat democritum, putant utroque sea at. Ea vel purto conceptam.
+                  </p>
+                  <p>
+                      Ad eos reque singulis, te mentitum deserunt tacimates mea. Putant scripserit at quo, his at quem mazim. Pro augue putant tincidunt at, iudicabit forensibus adversarium sit ne, vel ea ornatus euripidis. No sed dicat scribentur definitiones, atomorum eloquentiam te nam. Nec cu intellegam delicatissimi.
+                  </p>
+                  <p>
+                      No iudico facilisi cum. Molestie oporteat salutatus per ex, utroque omnesque constituam te pri. Oportere iudicabit necessitatibus ad pri. Mei feugiat nusquam rationibus at. Everti pertinax maluisset vim no.
+                  </p>
+                </div>
             </div>
             <div class="card-action">
                 <a class="waves-effect waves-teal btn-flat">
@@ -105,9 +109,9 @@
         </div>
     </div>
 </div>
-       
+
     </div>
-    
+
   <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
     <a class="btn-floating btn-large red">
       <i class="material-icons">add</i>
@@ -119,9 +123,15 @@
       <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
     </ul>
   </div>
-          
+
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script>
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+  </script>
 </body>
 </html>
